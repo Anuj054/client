@@ -1,5 +1,7 @@
 
 import {AppBar,Toolbar,Box,Typography,styled} from '@mui/material';
+
+import Search from './SearchBar';
 const Component = styled(Box)`
 margin-left:12%;
 line-height:0;
@@ -23,7 +25,7 @@ const Header = ()=> {
     const subURL = 'https://static-assets-web.flixcart.com/www/linchpin/fk-cp-zion/img/plus_aef861.png';
     return(
         <StyledHeader>
-            <Toolbar>
+            <Toolbar style={{minHeight:55}}>
               <Component>
                 <img src={logoURL} alt='logo' style={{ width:75}}/>
                 <Box style={{display: 'flex'}}>
@@ -32,6 +34,7 @@ const Header = ()=> {
                         <PlusImage  src={subURL} alt='plus'/>
                 </Box>
               </Component>
+              <Search/>
             </Toolbar>
         </StyledHeader>
     )
