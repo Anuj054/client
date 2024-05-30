@@ -97,8 +97,12 @@ const blue = {
     font-family: 'IBM Plex Sans', sans-serif;
     font-weight: 600;
     font-size: 0.875rem;
-    line-height: 1.5;
+    line-height: 1.2;
     padding: 8px 16px;
+    min-width:120px;
+    height:35px;
+    
+    
     border-radius: 2px;
     color:#2874f0 ;
     transition: all 150ms ease;
@@ -154,10 +158,10 @@ const CustomButtons = ()=>
         <MenuItem onClick={createHandleMenuClick('GiftCard')}>GiftCard</MenuItem>
       </Menu>
     </Dropdown>
-<Typography style={{ marginTop: 6 , width: 135,paddingTop:4 , fontWeight:600}}> Become a Seller </Typography>
+<Typography style={{ marginTop: 3 , width: 135,paddingTop:1 , fontWeight:600}}> Become a Seller </Typography>
 
 <Dropdown>
-      <MenuUButton>More</MenuUButton>
+      <MenuUButton>More </MenuUButton>
       <Menu slots={{ listbox: Listbox }}>
         <MenuItem onClick={createHandleMenuClick('Notification Prefrences')}>Notification Prefrences
         </MenuItem>
