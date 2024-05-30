@@ -122,7 +122,15 @@ const blue = {
       outline: none;
     }
     `,
-  );
+  ); 
+  const MenuUButton = styled(MenuButton)`
+  background:#2874f0;
+  color:white;
+  border:none;
+  &:hover{
+background:#2874f0;
+border:none;
+  }`
 const CustomButtons = ()=>
 {
     const createHandleMenuClick = (menuItem) => {
@@ -146,8 +154,20 @@ const CustomButtons = ()=>
         <MenuItem onClick={createHandleMenuClick('GiftCard')}>GiftCard</MenuItem>
       </Menu>
     </Dropdown>
-<Typography style={{ marginTop: 6 , width: 135}}> Become a Seller </Typography>
-<Typography style={{ marginTop: 6 }}> More</Typography>
+<Typography style={{ marginTop: 6 , width: 135,paddingTop:4 , fontWeight:600}}> Become a Seller </Typography>
+
+<Dropdown>
+      <MenuUButton>More</MenuUButton>
+      <Menu slots={{ listbox: Listbox }}>
+        <MenuItem onClick={createHandleMenuClick('Notification Prefrences')}>Notification Prefrences
+        </MenuItem>
+        
+        <MenuItem onClick={createHandleMenuClick('24x7')}>24x7 Customer Care </MenuItem>
+        <MenuItem onClick={createHandleMenuClick('Advertise')}>Advertise</MenuItem>
+        <MenuItem onClick={createHandleMenuClick('Download')}>Download App</MenuItem>
+       
+      </Menu>
+    </Dropdown>
 
 <Container >
     <ShoppingCart/>
